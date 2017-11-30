@@ -7,5 +7,8 @@ Short Summary: During my summer internship at York University I programmed an aq
 
 https://www.youtube.com/watch?v=KIyxOkXr_JU
 
+# Graphical User Interface for controlling robot or setting it to auto-mode
+![york_main](https://user-images.githubusercontent.com/28791312/33418244-f81d8a92-d572-11e7-8db4-a23b05bc94ee.png)
+
 # Particle Filter GUI for localising the robot on pond.
 ![particle-filter](https://user-images.githubusercontent.com/28791312/33417974-aec9fc78-d571-11e7-8a66-bde5bf163f06.gif)
