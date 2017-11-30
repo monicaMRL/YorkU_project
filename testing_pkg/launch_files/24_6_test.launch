@@ -1,0 +1,13 @@
+<launch>
+	<node name="heartbeat" pkg="heatbeat" type="heartbeat.py"/>
+	<node name="arduino" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0"/>
+	<node name="helmsman" pkg="helmsman" type="helmsmanCOUNTERV1.py" output="screen" />
+
+	<!-- <node name="setThrottle" pkg="minnow_scripts" type="set_throttle_service.py" output="screen" /> -->
+	<!-- <node name="camera_publisher" pkg="camera" type="video_publisher" args="0"/> -->
+	<!-- <node name="follow_object" pkg="camera" type="follow_object_red.py" /> -->	
+	<!-- <node name="gps_driver" pkg="nmea_navsat_driver" type="nmea_topic_driver">
+		<param name="baud" value="4800"/>
+		<param name="port" value="/dev/ttyUSB0" />	
+	</node> -->
+</launch>

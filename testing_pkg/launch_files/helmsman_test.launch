@@ -1,0 +1,9 @@
+<launch>
+	<!-- <node name="heartbeat" pkg="testing_pkg" type="talker.py"/> -->
+	<node name="arduino" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0"/>
+	<node name="helmsman" pkg="testing_pkg" type="helmsmanCOUNTERV1.py" output="screen"/>	
+	<!-- <node name="gps_driver" pkg="nmea_navsat_driver" type="nmea_topic_driver">
+		<param name="baud" value="4800"/>
+		<param name="port" value="/dev/ttyUSB0" />	
+	</node> -->
+</launch>

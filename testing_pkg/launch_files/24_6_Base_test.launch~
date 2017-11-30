@@ -1,0 +1,15 @@
+<launch>
+	<node name="heartbeat" pkg="heatbeat" type="heartbeat.py" output="screen" />
+	<!-- <node name="camera_subscriber" pkg="camera" type="video_subscriber" /> -->
+	<node name="joystick" pkg="joy" type="joy_node" />
+	<!-- <node name="joystickControl2" pkg="testing_pkg" type="teleop_testV2.py" output="screen" /> -->
+	<node name="joystickControl1" pkg="testing_pkg" type="teleop_testV3.py" output="screen" />
+	<node name="user_interface" pkg="visual_graphics" type="user_interface.py" output="screen" />
+	
+	<!-- ROS BAG -->
+	<node pkg="rosbag" type="record" name="vesselStatus_bag_23_7" args="record -O vesselStatus.bag /vesselStatus" output="screen" />
+	<node pkg="rosbag" type="record" name="image_bag_23_7" args="record -O image.bag /camera/image" output="screen" />
+	<node pkg="rosbag" type="record" name="fix_bag_23_7" args="record -O gps_fix.bag /fix" output="screen"/>
+	<node pkg="rosbag" type="record" name="timeRef_bag_23_7" args="record -O gps_time.bag /time_reference" output="screen" />
+	<node pkg="rosbag" type="record" name="vel_bag_23_7" args="record -O gps_vel.bag /vel" output="screen"/>
+</launch>
